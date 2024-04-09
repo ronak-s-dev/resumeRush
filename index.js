@@ -48,7 +48,7 @@ app.post('/download' , (req, res) => {
         proflang2: req.body["prof-lang2"],
         lang2: req.body["lang2"],
     })
-})
+});
 
 app.listen(port , () => {
     console.log(`Server is listening at local host ${port}`)
