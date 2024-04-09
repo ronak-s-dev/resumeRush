@@ -1,0 +1,421 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* CSS RESET */
+
+/* Custom CSS */
+:root{
+    --light1: #F9F7F7;
+    --light2: #DBE2EF;
+    --dark1: #3F72AF;
+    --dark2: #112D4E;
+    --font: "IBM Plex Mono", monospace;
+    --f-light: 300;
+    --f-medium: 500;
+    --f-bold: 700;
+}
+/* Header */
+body{
+    background-color: var(--light1);
+}
+
+/* Header */
+header{
+    width: 80%;
+    margin: auto;
+    height: 5rem;
+    background-color: var(--light2);
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+.nav-bar{
+    width: 100%;
+    margin-right: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    font-family: var(--font)
+}
+.logo{
+    font-weight: var(--f-bold);
+    font-size: 3rem;
+    margin-left: 3rem;
+}
+.logo > span{
+    color: var(--dark1);
+}
+.btn-area{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+.btn-area > div{
+    padding: 5px;
+}
+.btn-area > div > button{
+    border: none;
+    background-color: transparent;  
+    font-size: 1.5rem;  
+}
+.res-link{
+    text-decoration: none;
+    background-color: var(--dark1);
+    color: var(--light1);
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+}
+#dropdown{
+    display: none;
+}
+/* Title section */
+.title-container{
+    font-family: var(--font);
+}
+#res-animation{
+    width: 500px;
+    aspect-ratio: 1;
+}
+.resume-template-container{
+    width: 80%;
+    height: 1200px;
+    margin: 5rem auto;
+    background-image: linear-gradient(135deg, #112D4E, #3F72AF, #DBE2EF, #F9F7F7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resume-template-container > img{
+    max-width: 50%;
+}
+#anime{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+#highlight-blue{
+    color: var(--dark1);
+}
+#rev-animation{
+    height: 100px;
+    aspect-ratio: 1;
+    margin-top: 3rem;
+}
+.testimonial{
+    height: 300px;
+    width: 80%;
+    background-color: var(--light2);
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+}
+.testimonial > p{
+    font-size: 1.5rem;
+    padding: 10px 50px;
+    width: 90%;
+    font-weight: 400;
+}
+#thumb{
+    max-width: 10%;
+    border-radius: 20px 0 20px 0;
+}
+.testimonial > div{
+    display: flex;
+    gap: 70px; 
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.features{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.feature-box{
+    background-color:#D9D9D9;
+    height: 100px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+    font-weight: var(--f-medium);
+}
+.feature-box > span:last-child{
+    color: var(--dark2);
+    font-size: 1.7rem;
+}
+.feature-container{
+    width: 80%;
+    height: 600px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.feature-container > div:nth-child(1){
+    font-family: var(--font);
+    font-size: 3rem;
+    font-weight: var(--f-bold);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.feature-container > div:nth-child(2){
+    font-family: var(--font);
+}
+.feature-container h3{
+    color: var(--light2);
+    background-color: rgba(17, 45, 78, 0.8);
+}
+#sticky-container{
+    height: 550px;
+}
+#sticky{
+    position: sticky;
+    top: 0;
+}
+.banner{
+    width: 80%;
+    height: 200px;
+    margin: 7rem auto;
+    background-color: var(--light2);
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.banner span{
+    font-weight: var(--f-bold);
+    color: var(--dark2);
+    font-size: 4rem;
+}
+.banner button{
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: var(--dark1);
+    color: var(--light1);
+    padding: 10px;
+}
+footer{
+    width: 100%;
+    background-color: #D9D9D9;
+    height: 400px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-box{
+    width: 80%;
+    height: 275px; 
+    font-family: var(--font);
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+}
+.footer-box p{
+    font-weight: 500;
+}
+.footer-box > div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: center;
+    gap: 1rem;
+}
+.footer-text{
+    color: #112D4E; 
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+/* Mobile breakpoint */
+@media screen and (max-width: 576px){
+    header{
+        width: 100%;
+        margin-top: 0;
+    }
+    .nav-bar{
+        margin: auto;
+    }
+    .logo{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+    .btn-area{
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        top: 80px;
+        padding: 20px;
+        background: rgba(63, 114, 175, 0.7);
+        width: 100%;
+        height: 35vh;
+        gap: 20px;
+        align-items: end;
+    }
+    .btn-area > div{
+        background-color: var(--dark2);
+        padding: 10px;
+    }
+    .btn-area > div > button{
+        color: var(--light1);
+        font-size: 1rem;
+    }
+    .res-link{
+        background-color: var(--dark1);
+        border-radius: 15px;
+        font-size: 1rem;
+    }
+    #dropdown{
+        display: inline;
+        width: 3.2rem;
+        aspect-ratio: 1;
+        margin-right: 1rem;
+    }
+    #res-animation{
+        width: 300px;
+        aspect-ratio: 1;
+    }
+    .resume-template-container{
+        height: 600px;
+        margin: 2rem auto;
+    }
+    .resume-template-container > img{
+        max-width: 90%;
+    }
+    #anime{
+        transform: scale(0.5);
+    }
+    #rev-animation{
+        height: 50px;
+        margin-top: 2rem;
+    }
+    .testimonial{
+        height: 200px;
+        gap: 1rem;
+    }
+    .testimonial > p{
+        font-size: 0.75rem;
+        width: 100%;
+        padding: 20px;
+    }
+    .testimonial > div{
+        gap: 20px;
+    }
+    .feature-box{
+        height: 75px;
+        width: 150px;
+        font-size: 0.5rem;
+    }
+    .feature-box > span:first-child{
+        padding: 5px;
+    }
+    .feature-box > span:last-child{
+        font-size: 1rem;
+    }
+    .feature-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        gap: 1rem;
+        height: 800px;
+    }
+    .feature-container > div:nth-child(1){
+        font-size: 1.7rem;
+        padding: 1rem;
+        display: block;
+        width: 90%;
+        height: 100px;
+    }
+    #sticky{
+        position: static;
+        top: 0;
+    }
+    .banner{
+        gap: 1rem;
+        padding: 20px;
+        height: 250px;
+    }
+    .banner span{
+        font-size: 2.5rem;
+        padding: 10px; 
+    }
+    footer{
+        height: 250px;
+    }
+    .footer-box{
+        height: 150px;
+        width: 100%;
+        padding: 0px 20px;
+    }
+    .footer-text{
+        font-size: 0.8rem;
+    }
+    .footer-box p, li{
+        font-size: 0.75rem;
+    }
+    
+}
+/* Body */

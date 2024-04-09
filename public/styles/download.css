@@ -1,0 +1,240 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* CSS RESET */
+:root{
+    --light1: #F9F7F7;
+    --light2: #DBE2EF;
+    --dark1: #3F72AF;
+    --dark2: #112D4E;
+    --font: "IBM Plex Mono", monospace;
+    --f-light: 300;
+    --f-medium: 500;
+    --f-bold: 700;
+}
+body{
+    background-image: linear-gradient(to bottom, var(--light1), var(--light2), var(--dark1), var(--dark2));
+}
+.template{
+    width: 595px;
+    height: 842px;
+    margin: 5rem auto;
+    background-color: aliceblue;
+    box-shadow: 10px 10px 10px black;
+    font-family: var(--font);
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.left{
+    height: 100%;
+    background-color: var(--light2);
+    display: grid;
+    grid-template-rows: 100px repeat(2, 2fr) 1fr;
+    row-gap: 10px;
+}
+.right{
+    background-color: var(--light1);
+}
+.image{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.image > img{
+    border-radius: 100%;
+    background-color: #3F72AF;
+    max-width: 80px;
+}
+.personal{
+    font-size: 0.7rem;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3px;
+}
+#addr{
+    max-width: 200px;
+    overflow: hidden;
+}
+.skills{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+}
+.skills :not(span:first-child){
+    background-color: #112D4E;
+    font-size: 0.9rem;
+    padding: 3px;
+    color: #DBE2EF;
+    font-weight: var(--f-bold);
+}
+.skills span:nth-child(1){
+    grid-column-start: span 2;
+}
+.languages{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+}
+.languages :not(span:first-child){
+    font-size: 0.9rem;
+}
+.languages p{
+    color: #3F72AF;
+    font-style: italic;
+}
+.title{
+    background-color: var(--dark2);
+    height: 220px;
+    width: 95%;
+    color: #DBE2EF;
+    padding: 10px;
+}
+.title span{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.title p{
+    margin-top: 20px;
+    font-size: 0.8rem;
+    overflow: hidden;
+}
+.education{
+    margin: 10px auto;
+}
+.heading{
+    color: var(--dark2);
+    font-size: 1.2rem;
+    margin-left: 25px;
+}
+.edu-block{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+    margin-left: 25px;
+}
+.edu-block span:first-child{
+    font-weight: var(--f-bold);
+    font-size: 2rem;
+}
+.edu-block span:nth-child(4){
+    font-style: italic;
+    color: var(--dark1);
+}
+.certifications :not(span:first-child){
+    font-weight: var(--f-bold);
+    font-size: 1.2rem;
+    max-width: 400px;
+    overflow: hidden;
+}
+.certifications > div{
+    margin-left: 25px;
+}
+.certifications p{
+    font-weight: 300;
+    color: var(--light2);
+    font-size: 0.8rem !important;
+    font-style: italic;
+    max-width: 330px;
+    overflow: hidden;
+}
+.projects{
+    margin: 15px;
+}
+.projects span:first-child{
+    margin: 0px;
+}
+.projects :not(span:first-child){
+    font-weight: var(--f-bold);
+    font-size: 1.5rem;
+}
+.projects > span:last-child{
+    font-size: 1rem;
+}
+.projects p{
+    color: black;
+    max-width: 330px;
+    overflow: hidden;
+}
+#btnPrint{
+    margin: 7px auto;
+    padding: 10px;
+    background-color: seagreen;
+    border: 2px var(--dark2) solid;
+    border-radius: 1rem;
+    color: var(--light1);
+    font-family: var(--font);
+    font-weight: var(--f-bold);
+    font-size: 2rem;
+}
+#btnPrint:hover{
+    cursor: pointer;
+}
+#btn-container{
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 576px){
+    body{
+        background-image: none;
+        background-color: var(--dark2);
+    }
+    .template{
+        display: none;
+    }
+    #btnPrint{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        position: absolute;
+        inset: 0;
+        margin: auto;
+    }
+}

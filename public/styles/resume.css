@@ -1,0 +1,278 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* CSS RESET */
+/* Variables */
+:root{
+    --dark1 : #112D4E;
+    --dark2 : #3F72AF;
+    --light2: #DBE2EF;
+    --light1: #F9F7F7;
+    --font: "IBM Plex Mono", monospace;
+    --f-light: 300;
+    --f-medium: 500;
+    --f-bold: 700;
+}
+
+.container-form{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.sidebar{
+    height: 100vh;
+    background-image: linear-gradient(to top right, var(--light1), var(--light2), var(--dark2), var(--dark1));
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    justify-items: center;
+    align-items: center;
+}
+#highlight{
+    color: var(--dark2);
+}
+#logo > span{
+    font-size: 3rem;
+    font-family: var(--font);
+    font-weight: var(--f-bold);
+}
+.resume-parts{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(8, 1fr);
+    justify-items: start;
+    height: 80%;
+    align-items: center;
+    margin-right: 80px;
+    margin-bottom: 150px;
+}
+.resume-parts span{
+    font-family: var(--font);
+    font-weight: var(--f-medium);
+    font-size: 1.2rem;
+    padding: 10px;
+}
+.resume-parts > img{
+    transform: scale(2);
+    justify-self: center;
+}
+.navigation{
+    margin-top: 4.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+.nav-btn-form{
+    border: none;
+    background-color: var(--light2);
+    padding: 20px;
+    border-radius: 15px;
+    font-family: var(--font);
+    font-weight: var(--f-bold);
+}
+
+form{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center; 
+    font-family: var(--font);
+}
+form label{
+    font-weight: var(--f-bold);
+    font-size: 1.2rem;
+}
+form input,textarea{
+    padding: 7px;
+    border: none;
+    border: 1px solid #3F72AF;
+}
+form input:required{
+    border: 1px solid red;
+}
+input[type="button"]{
+    background-color: var(--dark2);
+    color: #F9F7F7;
+    padding: 10px;
+    font-weight: var(--f-bold);
+    border-radius: 10px;
+}
+#PERSONAL{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    row-gap: 2rem;
+    column-gap: 1rem;
+    border: 3px solid #112D4E;
+    border-radius: 20px;
+    padding: 50px;
+}
+#SKILLS-CONT{
+    border: 3px solid #112D4E;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+}
+select{
+    overflow-y: auto;
+    width: 90%;
+    border: none;
+}
+select option{
+    background-color: var(--dark1);
+    color: #DBE2EF;
+    padding: 6px;
+    font-weight: var(--f-bold);
+}
+#SKILLS-CONT > p{
+    color: red;
+    font-style: italic;
+}
+#EDUCATION{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    column-gap: 1rem;
+    row-gap: 0.9rem;
+    border: 3px solid #112D4E;
+    border-radius: 20px;
+    padding: 30px;
+}
+#EDUCATION > legend{
+    grid-column-start: span 4;
+    font-size: 1.5rem;
+    font-weight: var(--f-bold);
+}
+#PROJECTS{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    border: 3px solid #112D4E;
+    border-radius: 20px;
+    padding: 50px;
+}
+#CERTIFICATIONS{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+    row-gap: 0.9rem;
+    border: 3px solid #112D4E;
+    border-radius: 20px;
+    padding: 50px;
+}
+#CERTIFICATIONS textarea{
+    height: 75px;
+}
+#LANG{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    border: 3px solid #112D4E;
+    border-radius: 20px;
+    padding: 50px;
+}
+.btn-chg-clr{
+    background-color: var(--dark2);
+    color: #F9F7F7;
+}
+.btn-green{
+    background-color: #BED7DC;
+    color: black;
+    font-weight: var(--f-bold);
+    border: 1px solid #2C7865;
+}
+#progress{
+    display: none;
+}
+@media screen and (max-width: 576px){
+    .container-form{
+        display: block;
+    }
+    .sidebar{
+        display: flex;
+        height: 6rem;       
+        background-image: none;
+        background-color: var(--light2);
+        padding: 10px 0 10px 0;
+    }
+    #logo{
+        transform: scale(0.7);
+    }
+    .resume-parts{
+        display: none;
+        width: 100vh;
+    }
+    .navigation{
+        display: block;
+        margin-top: 0;
+        overflow-y: auto;
+        width: 100%;
+        transform: scale(0.8);
+    }
+    .nav-btn-form{
+        margin: 15px;
+    }
+    hr{
+        margin: 20px auto !important;
+    }
+    form{
+        width: 90%;
+    }
+    fieldset{
+        width: 100%;
+        grid-template-columns: 1fr !important;
+        margin-bottom: 2rem !important;
+    }
+    #EDUCATION{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    #EDUCATION > legend{
+        grid-column-start: span 1;
+    }
+
+}

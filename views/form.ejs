@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!-- Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles/resume.css">
+</head>
+<body>
+    <div class="container-form">
+        <div class="sidebar">
+            <div id="logo">
+                <span>resume<span id="highlight">Rush</span></span>
+            </div>
+            <div class="resume-parts">
+                <img src="/images/dash.svg" alt="dashboard">
+                <span>My Dashboard</span>
+                <img src="/images/person.svg" alt="personal">            
+                <span class="dash-1">Personal Details</span>
+                <img src="/images/contact.svg" alt="contact">
+                <span class="dash-2">Skills</span>
+                <img src="/images/edu.svg" alt="skills">
+                <span class="dash-3">Education</span>
+                <img src="/images/project.svg" alt="project">
+                <span class="dash-4">Projects</span>
+                <img src="/images/cert.svg" alt="cert">
+                <span class="dash-5">Certifications</span>
+                <img src="/images/lang.svg" alt="languages">
+                <span class="dash-6">Languages</span>        
+    
+            </div>
+        </div>
+        <div class="form-container">
+            <nav class="navigation">
+                <button class="nav-btn-form p-btn">Personal Details</button>
+                <button class="nav-btn-form s-btn">Skills</button>
+                <button class="nav-btn-form e-btn">Education</button>
+                <button class="nav-btn-form pr-btn">Projects</button>
+                <button class="nav-btn-form c-btn">Certifications</button>
+                <button class="nav-btn-form l-btn">Languages</button>
+            </nav>
+            <hr style="height: 4px; width: 70%; margin: 40px auto; background-color: black;">
+            <!-- Form input -->
+            <div class="input-container">
+                <form action="/download" method="POST" target="_blank">        
+                <fieldset id="PERSONAL">
+                    <label for="fullName">Name: </label>
+                    <input type="text" id="fullName" name="fullName" placeholder = "Full Name" required autofocus>
+                    <label for="phone">Phone: </label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 6768738222">
+                    <label for="address">Address: </label>
+                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                    <label for="profile">Profile: </label>
+                    <textarea name="profile" id="profile" cols="30" rows="10"></textarea>
+                    <label for="email">Email ID: </label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                    <label for="linkedin">LinkedIn: </label>
+                    <input type="text" name="linkedin" id="linkedin" required>
+                    <label for="github">Github: </label>
+                    <input type="text" name="github" id="github">
+                    <input type="button" value="Save Personal Info" onclick="next1()"> 
+                </fieldset>
+                <fieldset id="SKILLS-CONT">
+                    <label for="skills">Choose your skills: </label>
+                    <select name="skills" id="skills" size="10" multiple>
+                        <option value="Javascript">Javascript</option>
+                        <option value="Python">Python</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="jQuery">jQuery</option>
+                        <option value="NodeJS">NodeJS</option>
+                        <option value="ExpressJS">ExpressJS</option>
+                        <option value="MongoDB">MongoDB</option>
+                        <option value="Music Production">Music Production</option>
+                        <option value="Git">Git</option>
+                    </select>
+                    <p>*Hold Ctrl on Windows and Cmd on Mac to select multiple options</p>
+                    <input type="button" value="Save Skills Info" onclick="next2()">
+                </fieldset>     
+                <fieldset id="EDUCATION">
+                    <legend>Degree Details<hr></legend>                
+                    <label for="college">Institution Name: </label>
+                    <input type="text" id="college" name="college" required>
+                    <label for="degree">Degree: </label>
+                    <input type="text" id="degree" name="degree" required>
+                    <label for="from">From Date: </label>
+                    <input type="date" id="from" name="from" required>
+                    <label for="to">To Date: </label>
+                    <input type="date" id="to" name="to" required>
+                    <label for="percent-degree">Percentage</label>
+                    <input type="text" id="percent-degree" name="percent-degree" required>
+    
+                    <legend>PU Details<hr></legend>
+                    <label for="school">Institution Name: </label>
+                    <input type="text" id="school" name="school" required>
+                    <label for="stream">Stream: </label>
+                    <input type="text" id="stream" name="stream" required>
+                    <label for="start">From Date: </label>
+                    <input type="date" id="start" name="start" required>
+                    <label for="end">To Date: </label>
+                    <input type="date" id="end" name="end" required>
+                    <label for="percent-school">Percentage</label>
+                    <input type="text" id="percent-school" name="percent-school" required>
+                    <input type="button" value="Save Education Info" onclick="next3()">
+                </fieldset> 
+                <fieldset id="PROJECTS">
+                    <label for="project-name">Name of project: </label>
+                    <input type="text" id="project-name" name="project-name" required>
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                    <label for="author">Author: </label>
+                    <input type="text" id="author" name="author" required >
+                    <input type="button" value="Save Project Info" onclick="next4()">
+                </fieldset> 
+                
+                <fieldset id="CERTIFICATIONS">
+                    <label for="cert1">Certificate 1: </label>
+                    <input type="text" id="cert1" name="cert1" required>
+                    <label for="des-cert1">Description: </label>
+                    <textarea name="des-cert1" id="des-cert1" cols="30" rows="10"></textarea>
+                    <label for="cert2">Certificate 2: </label>
+                    <input type="text" id="cert2" name="cert2" required>
+                    <label for="des-cert2">Description: </label>
+                    <textarea name="des-cert2" id="des-cert2" cols="30" rows="10"></textarea>
+                    <input type="button" value="Save Certificates Info" onclick="next5()">
+                </fieldset>
+                <fieldset id="LANG">
+                    <label for="lang1">Language 1: </label>
+                    <input type="text" id="lang1" name="lang1" required>
+                    <label for="prof-lang1">Proficiency: </label>
+                    <input type="text" id="prof-lang1" name="prof-lang1" required>
+                    <label for="lang2">Language 2: </label>
+                    <input type="text" id="lang2" name="lang2" required>
+                    <label for="prof-lang2">Proficiency: </label>
+                    <input type="text" id="prof-lang2" name="prof-lang2" required>
+                    <input type="button" value="Save Languages Info" onclick="generate()">
+                    <input class="generate" type="submit" value="GENERATE RESUME">
+                </fieldset>            
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://malsup.github.io/jquery.form.js"></script>
+    <!-- Custom JS -->
+    <script src="/scripts/resume.js"></script>
+</body>
+</html>
+

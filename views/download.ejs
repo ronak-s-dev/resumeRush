@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="/styles/download.css">
+</head>
+<body>
+    <div class="template">
+        <div class="left">
+            <div class="image">
+                <img src="/images/portrait.jpg" alt="portrait">
+            </div>
+            <div class="personal">
+                <img src="/images/mail.svg" alt="mail">
+                <p><%= email %></p>
+                <img src="/images/phone.svg" alt="phone">
+                <p><%= phone %></p>
+                <img src="/images/location.svg" alt="location">
+                <p id="addr"><%= address %></p>
+                <img src="/images/github.svg" alt="github">
+                <p><%= github %></p>
+                <img src="/images/linkedin.svg" alt="linkedin">
+                <p><%= linkedin %></p>
+            </div>
+            <div class="skills">
+                <span>SKILLS<hr style="border: 1px solid #112D4E; width: 90%; padding: 0;"></span>
+                <% for( let index = 0; index < skills.length; index++ ) { %>
+                    <span><%= skills[index] %></span>
+                <% } %> 
+            </div>
+            <div class="languages">
+                <span>LANGUAGES<hr style="border: 1px solid #112D4E; width: 90%; padding: 0;"></span>
+                <div>
+                    <span><%= lang1 %></span>
+                    <p><%= proflang1 %></p>
+                </div>
+                <div>
+                    <span><%= lang2 %></span>
+                    <p><%= proflang2 %></p>
+                </div>           
+            </div>
+        </div>
+        <div class="right">
+            <div class="title">
+                <span><%= name %></span>
+                <p><%= profile %></p>
+            </div>
+            <div class="education">
+                <span class="heading">EDUCATION<hr style="border: 1px solid #112D4E; width: 90%; padding: 0;"></span>
+                <div class="edu-block">
+                    <div>
+                        <span><%= college %></span><br>
+                        <span><%= degree %></span>
+                        <span><%= from %> to <%= to %></span>
+                        <p><%= percentDegree %></p>
+                    </div>
+                    <div>
+                        <span><%= school %></span><br>
+                        <span><%= stream %></span>
+                        <span><%= start %> to <%= end %></span>
+                        <p><%= percentSchool %></p>
+                    </div>
+                </div>            
+            </div>
+            <div class="certifications">
+                <span class="heading">CERTIFICATIONS<hr style="border: 1px solid #112D4E; width: 90%; padding: 0;"></span>
+                <div>
+                    <span><%= cert1 %></span>
+                    <p><%= desCert1 %></p>
+                </div>
+                <div>
+                    <span><%= cert2 %></span>
+                    <p><%= desCert2 %></p>
+                </div>
+            </div>
+            <div class="projects">
+                <span class="heading">PROJECTS<hr style="border: 1px solid #112D4E; width: 100%; padding: 0;"></span>
+                <span><%= projectName %></span>
+                <p><%= description %></p>
+                <span><%= author %></span>
+            </div>
+        </div>
+    </div> 
+<div id="btn-container"><button id = "btnPrint">SAVE AS PDF</button></div>  
+</body>
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+<!-- html2canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="/scripts/download.js"></script>
+</body>
+</html>
+
