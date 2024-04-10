@@ -50,6 +50,6 @@ app.post('/download' , (req, res) => {
     })
 });
 
-app.listen(port , () => {
+app.listen(process.env.PORT || port , () => {
     console.log(`Server is listening at local host ${port}`)
 });
